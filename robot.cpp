@@ -55,7 +55,7 @@ void Addrobot(normal te, normal robflag, normal robottype) {
     }
 }
 
-void loseHP(normal ti, normal te, normal robflag, normal Hp) {
+void loseHP( normal te, normal robflag, normal Hp) {
     auto t = findrobot(te, robflag);
     if (t != Manage::All.end()) {
         if (t->GetHP() <= Hp) RobDeath((*t));
@@ -91,16 +91,16 @@ void commandin() {
     if (commandtrue(command))
         switch (command) {
             case 'A':
-                Addrobot(time, para1, para2, para3);
+                Addrobot(para1, para2, para3);
                 break;
             case 'F':
-                loseHP(time, para1, para2, para3);
+                loseHP(para1, para2, para3);
                 break;
             case 'H':
-                riseHT(time, para1, para2, para3);
+                riseHT(para1, para2, para3);
                 break;
             case 'U':
-                setlevel(time, para1, para2, para3);
+                setlevel(para1, para2, para3);
                 break;
             default: ;
         }

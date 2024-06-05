@@ -109,11 +109,11 @@ public:
 
     friend void RefreshState(normal);
 
-    friend void loseHP(normal, normal, normal, normal);
+    friend void loseHP(normal, normal, normal);
 
-    friend void riseHT(normal, normal, normal, normal);
+    friend void riseHT(normal, normal, normal);
 
-    friend void setlevel(normal, normal, normal, normal);
+    friend void setlevel(normal, normal, normal);
 };
 
 void RobDeath(robot &ptr);
@@ -122,13 +122,13 @@ bool is_overheat(robot *ptr);
 
 void RefreshState(normal ti);
 
-void Addrobot(normal, normal, normal, normal);
+void Addrobot(normal, normal, normal);
 
-void loseHP(normal, normal, normal, normal);
+void loseHP(normal, normal, normal);
 
-void riseHT(normal, normal, normal, normal);
+void riseHT(normal, normal, normal);
 
-void setlevel(normal, normal, normal, normal);
+void setlevel(normal, normal, normal);
 
 void commandin();
 
