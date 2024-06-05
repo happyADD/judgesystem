@@ -55,7 +55,7 @@ void Addrobot(normal te, normal robflag, normal robottype) {
     }
 }
 
-void loseHP( normal te, normal robflag, normal Hp) {
+void loseHP(normal te, normal robflag, normal Hp) {
     auto t = findrobot(te, robflag);
     if (t != Manage::All.end()) {
         if (t->GetHP() <= Hp) RobDeath((*t));
@@ -64,16 +64,21 @@ void loseHP( normal te, normal robflag, normal Hp) {
 }
 
 void riseHT(normal te, normal robflag, normal Ht) {
-    auto t =findrobot(te,robflag);
-    if(t->GetRobType() == 0) t->setHT(Ht);
+    auto t = findrobot(te, robflag);
+    if (t->GetRobType() == 0) t->setHT(Ht);
 }
 
 void setlevel(normal te, normal robflag, normal lv) {
-    auto t =findrobot(te,robflag);
-    if(t->GetRobType() == 0 &&t->GetLv()<=lv){
+    auto t = findrobot(te, robflag);
+    if (t->GetRobType() == 0 && t->GetLv() <= lv) {
         t->setLv(lv);
-        if(lv == 2){t->setMax_hp(150);t->setMax_ht(200);}
-        else if(lv == 3){t->setMax_hp(250);t->setMax_ht(300);}
+        if (lv == 2) {
+            t->setMax_hp(150);
+            t->setMax_ht(200);
+        } else if (lv == 3) {
+            t->setMax_hp(250);
+            t->setMax_ht(300);
+        }
     }
 }
 
